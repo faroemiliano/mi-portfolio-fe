@@ -10,6 +10,7 @@ import {
   ListItem,
   ListItemText,
   useMediaQuery,
+  useState,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
@@ -19,7 +20,7 @@ import iconeBra from "../assets/iconeBrasil.jpeg";
 export default function Header({ texts, setLanguage }) {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => setDrawerOpen(!drawerOpen);
 

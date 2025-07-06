@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Link } from "@mui/material";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import fotoContacto from "../assets/contactos.jpeg";
+import { Container } from "tsparticles-engine";
 
 export default function Contacto() {
   return (
@@ -47,59 +48,64 @@ export default function Contacto() {
         />
 
         {/* Información de contacto */}
-        <Box sx={{ flex: 1 }}>
-          <Typography
-            variant="h5"
-            gutterBottom
-            sx={{ fontWeight: "bold", textAlign: { xs: "center", sm: "left" } }}
-          >
-            Contacto
-          </Typography>
-
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-            <Email sx={{ color: "#66FCF1" }} />
-            <Typography variant="body2" component="span">
-              Email:&nbsp;
-              <Link
-                href="mailto:faroemiliano@gmail.com"
-                underline="hover"
-                color="inherit"
-              >
-                faroemiliano@gmail.com
-              </Link>
+        <Container id="contactos">
+          <Box sx={{ flex: 1 }}>
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{
+                fontWeight: "bold",
+                textAlign: { xs: "center", sm: "left" },
+              }}
+            >
+              Contacto
             </Typography>
-          </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-            <LinkedIn sx={{ color: "#66FCF1" }} />
-            <Typography variant="body2" component="span">
-              LinkedIn:&nbsp;
-              <Link
-                href="https://www.linkedin.com/in/emiliano-faro/"
-                target="_blank"
-                underline="hover"
-                color="inherit"
-              >
-                linkedin.com/in/emiliano-faro
-              </Link>
-            </Typography>
-          </Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
+              <Email sx={{ color: "#66FCF1" }} />
+              <Typography variant="body2" component="span">
+                Email:&nbsp;
+                <Link
+                  href="mailto:faroemiliano@gmail.com"
+                  underline="hover"
+                  color="inherit"
+                >
+                  faroemiliano@gmail.com
+                </Link>
+              </Typography>
+            </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-            <GitHub sx={{ color: "#66FCF1" }} />
-            <Typography variant="body2" component="span">
-              GitHub:&nbsp;
-              <Link
-                href="https://github.com/faroemiliano?tab=repositories"
-                target="_blank"
-                underline="hover"
-                color="inherit"
-              >
-                github.com/faroEmiliano
-              </Link>
-            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
+              <LinkedIn sx={{ color: "#66FCF1" }} />
+              <Typography variant="body2" component="span">
+                LinkedIn:&nbsp;
+                <Link
+                  href="https://www.linkedin.com/in/emiliano-faro/"
+                  target="_blank"
+                  underline="hover"
+                  color="inherit"
+                >
+                  linkedin.com/in/emiliano-faro
+                </Link>
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <GitHub sx={{ color: "#66FCF1" }} />
+              <Typography variant="body2" component="span">
+                GitHub:&nbsp;
+                <Link
+                  href="https://github.com/faroemiliano?tab=repositories"
+                  target="_blank"
+                  underline="hover"
+                  color="inherit"
+                >
+                  github.com/faroEmiliano
+                </Link>
+              </Typography>
+            </Box>
           </Box>
-        </Box>
+        </Container>
       </Box>
 
       {/* Frase final */}
