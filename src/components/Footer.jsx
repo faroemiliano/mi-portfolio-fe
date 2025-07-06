@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography, Link, Container } from "@mui/material";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import fotoContacto from "../assets/contactos.jpeg";
-import { Container } from "tsparticles-engine";
 
 export default function Contacto() {
   return (

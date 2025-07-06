@@ -2,8 +2,7 @@ import React, { useCallback, useState } from "react";
 import { Box } from "@mui/material";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import iconeArg from "./assets/iconeArgen.jpeg";
-import iconeBra from "./assets/iconeBrasil.jpeg";
+
 import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Project";
