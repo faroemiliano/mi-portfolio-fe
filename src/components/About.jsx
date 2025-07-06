@@ -6,42 +6,53 @@ export default function About({ texts }) {
   const [lopFoto, setLopFoto] = useState(false);
 
   return (
-    <Box sx={{ py: 4 }}>
+    <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Container id="sobremi">
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", md: "row" }, // columna en mobile, fila en desktop
+            flexDirection: { xs: "column", md: "row" },
             alignItems: "center",
-            gap: 10,
+            justifyContent: "center",
+            gap: { xs: 4, md: 10 },
           }}
         >
           {/* Texto */}
-          <Box sx={{ flex: 1 }}>
+          <Box
+            sx={{
+              flex: 1,
+              textAlign: { xs: "center", md: "left" },
+              px: { xs: 2, sm: 3, md: 0 },
+            }}
+          >
             <Typography
               variant="h4"
               gutterBottom
               sx={{ color: "#66FCF1", fontWeight: "bold" }}
             >
-              {texts.aboutMe} {/* Título traducido */}
+              {texts.aboutMe}
             </Typography>
             <Typography
               variant="body1"
-              textAlign="justify"
-              sx={{ color: "#B0BEC5", fontWeight: "bold" }}
+              sx={{
+                color: "#B0BEC5",
+                fontWeight: "bold",
+                textAlign: "justify",
+              }}
             >
-              {texts.introText} {/* Texto descriptivo traducido */}
+              {texts.introText}
             </Typography>
           </Box>
 
-          {/* Imagen con flip */}
+          {/* Imagen con efecto flip */}
           <Box
             onClick={() => setLopFoto((prev) => !prev)}
             sx={{
-              width: 400,
-              height: 400,
+              width: { xs: 220, sm: 280, md: 400 },
+              height: { xs: 220, sm: 280, md: 400 },
               perspective: "1000px",
               cursor: lopFoto ? "default" : "pointer",
+              mx: { xs: "auto", md: 0 }, // centra imagen en mobile
             }}
           >
             <Box
@@ -68,16 +79,17 @@ export default function About({ texts }) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "1.8rem",
+                  fontSize: { xs: "1rem", sm: "1.3rem" },
                   fontWeight: "bold",
+                  textAlign: "center",
+                  px: 2,
                   boxShadow: 10,
                 }}
               >
-                {texts.clickHere}{" "}
-                {/* Texto que invita a hacer click, traducido */}
+                {texts.clickHere}
               </Box>
 
-              {/* Lado trasero (la imagen) */}
+              {/* Lado trasero (imagen) */}
               <Box
                 sx={{
                   position: "absolute",
@@ -93,7 +105,7 @@ export default function About({ texts }) {
                 <Box
                   component="img"
                   src={fotoPerfil}
-                  alt={texts.photoAlt} /* Alt traducido */
+                  alt={texts.photoAlt}
                   sx={{
                     width: "100%",
                     height: "100%",

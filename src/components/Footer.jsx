@@ -1,27 +1,5 @@
-// import React from "react";
-// import { Box, Typography } from "@mui/material";
-
-// export default function Footer() {
-//   return (
-//     <Box
-//       component="footer"
-//       sx={{
-//         bgcolor: "primary.main",
-//         color: "white",
-//         py: 2,
-//         textAlign: "center",
-//         mt: "auto",
-//       }}
-//     >
-//       <Typography variant="body2">
-//         &copy; {new Date().getFullYear()} Emiliano Faro. Todos los derechos
-//         reservados.
-//       </Typography>
-//     </Box>
-//   );
-// }
 import React from "react";
-import { Box, Container, Typography, Link } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import fotoContacto from "../assets/contactos.jpeg";
 
@@ -30,88 +8,106 @@ export default function Contacto() {
     <Box
       component="footer"
       sx={{
-        bgcolor: "rgba(10, 25, 41, 0.85)", // fondo oscuro semitransparente
-        color: "#66FCF1", // azul neón suave para texto e íconos
-        py: 3,
+        bgcolor: "rgba(10, 25, 41, 0.85)",
+        color: "#66FCF1",
+        py: 4,
         px: 2,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        boxShadow: "0 -2px 10px rgba(102, 252, 241, 0.3)", // sombra azulada difusa para efecto glow
+        boxShadow: "0 -2px 10px rgba(102, 252, 241, 0.3)",
       }}
     >
-      {/* Contenido principal (foto + info) */}
+      {/* Contenido principal */}
       <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",
-          gap: 3,
-          mb: 2,
+          justifyContent: "center",
+          gap: 4,
+          width: "100%",
+          maxWidth: "1000px",
+          mb: 3,
+          px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {/* Foto */}
+        {/* Imagen de contacto */}
         <Box
           component="img"
           src={fotoContacto}
           alt="Contacto"
           sx={{
-            width: 350,
-            height: 130,
+            width: { xs: "100%", sm: 350 },
+            height: { xs: "auto", sm: 130 },
             borderRadius: "10%",
             objectFit: "cover",
-            boxShadow: "0 0 15px #66FCF1", // resplandor azul neón
+            boxShadow: "0 0 15px #66FCF1",
           }}
         />
 
-        {/* Datos de contacto */}
-        <Container id="contactos">
-          <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
+        {/* Información de contacto */}
+        <Box sx={{ flex: 1 }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ fontWeight: "bold", textAlign: { xs: "center", sm: "left" } }}
+          >
             Contacto
           </Typography>
 
-          <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
             <Email sx={{ color: "#66FCF1" }} />
-            Email:{" "}
-            <Link
-              href="mailto:emiliano@example.com"
-              underline="hover"
-              color="inherit"
-            >
-              faroemiliano@gmail.com
-            </Link>
-          </Typography>
+            <Typography variant="body2" component="span">
+              Email:&nbsp;
+              <Link
+                href="mailto:faroemiliano@gmail.com"
+                underline="hover"
+                color="inherit"
+              >
+                faroemiliano@gmail.com
+              </Link>
+            </Typography>
+          </Box>
 
-          <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
             <LinkedIn sx={{ color: "#66FCF1" }} />
-            LinkedIn:{" "}
-            <Link
-              href="https://www.linkedin.com/in/emiliano-faro/"
-              target="_blank"
-              underline="hover"
-              color="inherit"
-            >
-              linkedin.com/in/emiliano-faro
-            </Link>
-          </Typography>
+            <Typography variant="body2" component="span">
+              LinkedIn:&nbsp;
+              <Link
+                href="https://www.linkedin.com/in/emiliano-faro/"
+                target="_blank"
+                underline="hover"
+                color="inherit"
+              >
+                linkedin.com/in/emiliano-faro
+              </Link>
+            </Typography>
+          </Box>
 
-          <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <GitHub sx={{ color: "#66FCF1" }} />
-            GitHub:{" "}
-            <Link
-              href="https://github.com/faroemiliano?tab=repositories"
-              target="_blank"
-              underline="hover"
-              color="inherit"
-            >
-              github.com/faroEmiliano
-            </Link>
-          </Typography>
-        </Container>
+            <Typography variant="body2" component="span">
+              GitHub:&nbsp;
+              <Link
+                href="https://github.com/faroemiliano?tab=repositories"
+                target="_blank"
+                underline="hover"
+                color="inherit"
+              >
+                github.com/faroEmiliano
+              </Link>
+            </Typography>
+          </Box>
+        </Box>
       </Box>
 
-      {/* Frase inferior centrada */}
-      <Typography variant="body2" align="center" sx={{ color: "#7FFFD4" }}>
+      {/* Frase final */}
+      <Typography
+        variant="body2"
+        align="center"
+        sx={{ color: "#7FFFD4", fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
+      >
         &copy; {new Date().getFullYear()} Emiliano Faro. Todos los derechos
         reservados.
       </Typography>
