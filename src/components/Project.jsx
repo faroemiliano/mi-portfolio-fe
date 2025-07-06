@@ -50,54 +50,48 @@ export default function Project({ texts }) {
   const proyectosProfesionales = texts.proyectos.profesionales;
   const proyectosPracticos = texts.proyectos.practicos;
 
+  const buttons = [
+    { label: texts.proyectoProf, onClick: () => setOpenProf(true) },
+    { label: texts.proyectoPrac, onClick: () => setOpenPract(true) },
+    { label: texts.tecnologias, onClick: () => setOpenSkills(true) },
+    { label: "COMENTARIOS", onClick: () => setOpenComentarios(true) },
+  ];
+
   return (
     <Box sx={{ textAlign: "center", py: 4 }}>
-      <Grid
-        container
-        spacing={2}
-        justifyContent="center"
-        alignItems="center"
-        sx={{ mt: 2, px: 2 }}
-      >
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            onClick={() => setOpenProf(true)}
-          >
-            {texts.proyectoProf}
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            onClick={() => setOpenPract(true)}
-          >
-            {texts.proyectoPrac}
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            onClick={() => setOpenSkills(true)}
-          >
-            {texts.tecnologias}
-          </Button>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button
-            fullWidth
-            variant="contained"
-            onClick={() => setOpenComentarios(true)}
-          >
-            COMENTARIOS
-          </Button>
-        </Grid>
+      <Grid container spacing={2} justifyContent="center" sx={{ px: 2 }}>
+        {buttons.map((btn, idx) => (
+          <Grid item xs={12} sm={6} md={3} key={idx}>
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={btn.onClick}
+              sx={{
+                py: 1.5,
+                fontWeight: "bold",
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                color: "#66FCF1",
+                backgroundColor: "rgba(10, 25, 41, 0.85)",
+                boxShadow:
+                  "0 0 8px #66FCF1, 0 0 15px #66FCF1, 0 0 20px #66FCF1",
+                borderRadius: 2,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "#66FCF1",
+                  color: "rgba(10, 25, 41, 0.85)",
+                  boxShadow:
+                    "0 0 15px #66FCF1, 0 0 25px #66FCF1, 0 0 35px #66FCF1",
+                },
+              }}
+            >
+              {btn.label}
+            </Button>
+          </Grid>
+        ))}
       </Grid>
 
-      {/* Diálogos */}
+      {/* Los diálogos sin cambios */}
       <Dialog
         open={openComentarios}
         onClose={() => setOpenComentarios(false)}
@@ -131,8 +125,7 @@ export default function Project({ texts }) {
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpenComentarios(false)}>
-            {" "}
-            {texts.cerrar}{" "}
+            {texts.cerrar}
           </Button>
         </DialogActions>
       </Dialog>
@@ -151,7 +144,10 @@ export default function Project({ texts }) {
           Proyectos Profesionales
         </DialogTitle>
         <DialogContent
-          sx={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover" }}
+          sx={{
+            backgroundImage: `url(${fondo})`,
+            backgroundSize: "cover",
+          }}
         >
           <Grid container spacing={2}>
             {proyectosProfesionales.map((proyecto, i) => (
@@ -191,7 +187,10 @@ export default function Project({ texts }) {
           Proyectos Prácticos
         </DialogTitle>
         <DialogContent
-          sx={{ backgroundImage: `url(${fondo})`, backgroundSize: "cover" }}
+          sx={{
+            backgroundImage: `url(${fondo})`,
+            backgroundSize: "cover",
+          }}
         >
           <Grid container spacing={2}>
             {proyectosPracticos.map((proyecto, i) => (
