@@ -122,12 +122,24 @@ export default function Project({ texts }) {
           >
             <ComentariosForm texts={texts} />
           </Box>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
+            <Button
+              onClick={() => setOpenComentarios(false)}
+              sx={{
+                color: "#66FCF1",
+                border: "1px solid #66FCF1",
+                mt: "3px",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(102, 252, 241, 0.1)",
+                  boxShadow: "0 0 8px #66FCF1",
+                },
+              }}
+            >
+              {texts.cerrar}
+            </Button>
+          </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpenComentarios(false)}>
-            {texts.cerrar}
-          </Button>
-        </DialogActions>
       </Dialog>
 
       <Dialog
@@ -167,10 +179,24 @@ export default function Project({ texts }) {
               </Grid>
             ))}
           </Grid>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
+            <Button
+              onClick={() => setOpenProf(false)}
+              sx={{
+                color: "#66FCF1",
+                border: "1px solid #66FCF1",
+                mt: "3px",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(102, 252, 241, 0.1)",
+                  boxShadow: "0 0 8px #66FCF1",
+                },
+              }}
+            >
+              {texts.cerrar}
+            </Button>
+          </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpenProf(false)}>{texts.cerrar}</Button>
-        </DialogActions>
       </Dialog>
 
       <Dialog
@@ -210,10 +236,24 @@ export default function Project({ texts }) {
               </Grid>
             ))}
           </Grid>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
+            <Button
+              onClick={() => setOpenPract(false)}
+              sx={{
+                color: "#66FCF1",
+                border: "1px solid #66FCF1",
+                mt: "3px",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(102, 252, 241, 0.1)",
+                  boxShadow: "0 0 8px #66FCF1",
+                },
+              }}
+            >
+              {texts.cerrar}
+            </Button>
+          </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpenPract(false)}>{texts.cerrar}</Button>
-        </DialogActions>
       </Dialog>
 
       <Dialog
@@ -261,10 +301,24 @@ export default function Project({ texts }) {
               ))}
             </Grid>
           </Paper>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
+            <Button
+              onClick={() => setOpenSkills(false)}
+              sx={{
+                color: "#66FCF1",
+                border: "1px solid #66FCF1",
+                mt: "3px",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(102, 252, 241, 0.1)",
+                  boxShadow: "0 0 8px #66FCF1",
+                },
+              }}
+            >
+              {texts.cerrar}
+            </Button>
+          </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpenSkills(false)}>{texts.cerrar}</Button>
-        </DialogActions>
       </Dialog>
     </Box>
   );
