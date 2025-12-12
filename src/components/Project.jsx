@@ -42,6 +42,7 @@ export default function Project({ texts }) {
   const [openProf, setOpenProf] = useState(false);
   const [openPract, setOpenPract] = useState(false);
   const [openSkills, setOpenSkills] = useState(false);
+  const [openCurso, setOpenCurso] = useState(false);
   const [openComentarios, setOpenComentarios] = useState(false);
 
   const theme = useTheme();
@@ -49,11 +50,13 @@ export default function Project({ texts }) {
 
   const proyectosProfesionales = texts.proyectos.profesionales;
   const proyectosPracticos = texts.proyectos.practicos;
+  const proyectosCurso = texts.proyectos.curso;
 
   const buttons = [
     { label: texts.proyectoProf, onClick: () => setOpenProf(true) },
     { label: texts.proyectoPrac, onClick: () => setOpenPract(true) },
     { label: texts.tecnologias, onClick: () => setOpenSkills(true) },
+    { label: texts.curso, onClick: () => setOpenCurso(true) },
     { label: "COMENTARIOS", onClick: () => setOpenComentarios(true) },
   ];
 
@@ -304,6 +307,63 @@ export default function Project({ texts }) {
           <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
             <Button
               onClick={() => setOpenSkills(false)}
+              sx={{
+                color: "#66FCF1",
+                border: "1px solid #66FCF1",
+                mt: "3px",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(102, 252, 241, 0.1)",
+                  boxShadow: "0 0 8px #66FCF1",
+                },
+              }}
+            >
+              {texts.cerrar}
+            </Button>
+          </Box>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog
+        open={openCurso}
+        onClose={() => setOpenCurso(false)}
+        fullScreen={isMobile}
+        maxWidth="md"
+        fullWidth
+      >
+        <DialogTitle
+          textAlign="center"
+          sx={{ fontWeight: "bold", backgroundColor: "#bbdefb" }}
+        >
+          Curso 2025 - Ciberseguridad
+        </DialogTitle>
+        <DialogContent
+          sx={{
+            backgroundImage: `url(${fondo})`,
+            backgroundSize: "cover",
+          }}
+        >
+          <Grid container spacing={2}>
+            {proyectosCurso.map((proyecto, i) => (
+              <Grid item xs={12} sm={6} key={i}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    backgroundColor: "rgba(249,249,249,0.9)",
+                    borderRadius: 3,
+                  }}
+                >
+                  <Typography variant="h6" fontWeight="bold">
+                    {proyecto.title}
+                  </Typography>
+                  <Typography>{proyecto.description}</Typography>
+                </Paper>
+              </Grid>
+            ))}
+          </Grid>
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 2 }}>
+            <Button
+              onClick={() => setOpenCurso(false)}
               sx={{
                 color: "#66FCF1",
                 border: "1px solid #66FCF1",
