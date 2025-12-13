@@ -15,7 +15,7 @@ export default function ComentariosForm({ texts }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/api/comentarios/", {
+      .post("https://mi-portfolio-be-2.onrender.com/api/comentarios/", {
         autor,
         email,
         mensaje,
