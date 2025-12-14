@@ -1,5 +1,6 @@
 const translations = {
   es: {
+    cv: "Descargar CV",
     aboutMe: "Sobre mí...",
     introText: `Soy argentino, formado en Educación Física y socorrista. Durante 9 años dediqué mi vida al rescate acuático y terrestre, una experiencia que me enseñó profundamente sobre la importancia de la vida y del cuidado hacia los demás. No hay un sentimiento más gratificante que salvar una vida y ofrecer una nueva oportunidad a alguien — ya sea un hijo, una madre, un hermano o un amigo.Hoy me encuentro en un momento de transición de carrera, dejando atrás una trayectoria llena de aprendizajes y gratitud para abrazar el universo de la tecnología, algo que siempre me fascinó y que, en los últimos dos años, he tenido la oportunidad de estudiar y explorar de manera intensa. Estoy listo para seguir construyendo este nuevo camino con energía renovada, aprendiendo constantemente, enfrentando nuevos desafíos con dedicación y esfuerzo, y compartiendo esta nueva etapa con personas que también aman lo que hacen.`,
     clickHere: "Haga click",
@@ -54,6 +55,7 @@ const translations = {
   },
 
   pt: {
+    cv: "Baixar CV",
     aboutMe: "Sobre mim...",
     introText: `Sou argentino, formado em Educação Física e salva-vidas. Durante 9 anos dediquei minha vida ao resgate aquático e terrestre, uma experiência que me ensinou profundamente sobre a importância da vida e do cuidado com os outros. Não há sentimento mais gratificante do que salvar uma vida e oferecer uma nova oportunidade a alguém — seja um filho, uma mãe, um irmão ou um amigo.Hoje estou em um momento de transição de carreira, deixando para trás uma trajetória cheia de aprendizados e gratidão para abraçar o universo da tecnologia, algo que sempre me fascinou e que, nos últimos dois anos, tive a oportunidade de estudar e explorar intensamente. Estou pronto para continuar construindo esse novo caminho com energia renovada, aprendendo constantemente, enfrentando novos desafios com dedicação e esforço, e compartilhando esta nova etapa com pessoas que também amam o que fazem.`,
     clickHere: "Clique aqui",

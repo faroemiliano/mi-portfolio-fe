@@ -3,7 +3,9 @@ import { Box, Typography, Link, Container } from "@mui/material";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import fotoContacto from "../assets/contactos.jpeg";
 
-export default function Contacto() {
+export default function Contacto({ texts, language }) {
+  const cvUrl = language === "pt" ? "/cv-Faro-pt.pdf" : "/cv-Faro-es.pdf";
+
   return (
     <Box
       component="footer"
@@ -32,7 +34,7 @@ export default function Contacto() {
           px: { xs: 2, sm: 3, md: 4 },
         }}
       >
-        {/* Imagen de contacto */}
+        {/* Imagen */}
         <Box
           component="img"
           src={fotoContacto}
@@ -46,75 +48,92 @@ export default function Contacto() {
           }}
         />
 
-        {/* Información de contacto */}
+        {/* Info */}
         <Container id="contactos">
           <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="h5"
-              gutterBottom
-              sx={{
-                fontWeight: "bold",
-                textAlign: { xs: "center", sm: "left" },
-              }}
-            >
-              Contacto
+            <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold" }}>
+              {texts.contacto}
             </Typography>
 
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-              <Email sx={{ color: "#66FCF1" }} />
-              <Typography variant="body2" component="span">
-                Email:&nbsp;
-                <Link
-                  href="mailto:faroemiliano@gmail.com"
-                  underline="hover"
-                  color="inherit"
-                >
-                  faroemiliano@gmail.com
-                </Link>
-              </Typography>
+            <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
+              <Email />
+              <Link
+                href="mailto:faroemiliano@gmail.com"
+                color="inherit"
+                underline="hover"
+              >
+                faroemiliano@gmail.com
+              </Link>
             </Box>
 
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
-              <LinkedIn sx={{ color: "#66FCF1" }} />
-              <Typography variant="body2" component="span">
-                LinkedIn:&nbsp;
-                <Link
-                  href="https://www.linkedin.com/in/emiliano-faro/"
-                  target="_blank"
-                  underline="hover"
-                  color="inherit"
-                >
-                  linkedin.com/in/emiliano-faro
-                </Link>
-              </Typography>
+            <Box sx={{ display: "flex", gap: 1, mb: 1 }}>
+              <LinkedIn />
+              <Link
+                href="https://www.linkedin.com/in/emiliano-faro/"
+                target="_blank"
+                color="inherit"
+                underline="hover"
+              >
+                linkedin.com/in/emiliano-faro
+              </Link>
             </Box>
 
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <GitHub sx={{ color: "#66FCF1" }} />
-              <Typography variant="body2" component="span">
-                GitHub:&nbsp;
-                <Link
-                  href="https://github.com/faroemiliano?tab=repositories"
-                  target="_blank"
-                  underline="hover"
-                  color="inherit"
-                >
-                  github.com/faroEmiliano
-                </Link>
-              </Typography>
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <GitHub />
+              <Link
+                href="https://github.com/faroemiliano"
+                target="_blank"
+                color="inherit"
+                underline="hover"
+              >
+                github.com/faroemiliano
+              </Link>
             </Box>
           </Box>
         </Container>
+        {/* CV */}
+        <Box mt={3} display="flex" justifyContent="center">
+          <Link
+            href={cvUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            underline="none"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+
+              px: 3,
+              py: 1.2,
+              minWidth: 180,
+
+              borderRadius: "12px",
+              border: "2px solid #66FCF1",
+              color: "#66FCF1",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+
+              background: "rgba(10, 25, 41, 0.7)",
+              boxShadow: "0 0 12px rgba(102, 252, 241, 0.4)",
+              transition: "all 0.3s ease",
+
+              "&:hover": {
+                background: "#66FCF1",
+                color: "#0A1929",
+                boxShadow: "0 0 20px rgba(102, 252, 241, 0.9)",
+                transform: "translateY(-2px)",
+              },
+            }}
+          >
+            {texts.cv}
+          </Link>
+        </Box>
       </Box>
 
-      {/* Frase final */}
-      <Typography
-        variant="body2"
-        align="center"
-        sx={{ color: "#7FFFD4", fontSize: { xs: "0.8rem", sm: "0.9rem" } }}
-      >
-        &copy; {new Date().getFullYear()} Emiliano Faro. Todos los derechos
-        reservados.
+      <Typography variant="body2" sx={{ color: "#7FFFD4" }}>
+        © {new Date().getFullYear()} Emiliano Faro
       </Typography>
     </Box>
   );
