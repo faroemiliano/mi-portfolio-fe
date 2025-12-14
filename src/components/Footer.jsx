@@ -4,8 +4,10 @@ import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import fotoContacto from "../assets/contactos.jpeg";
 
 export default function Contacto({ texts, language }) {
-  const cvUrl = language === "pt" ? "/cv-Faro-pt.pdf" : "/cv-Faro-es.pdf";
-
+  console.log("LANGUAGE EN CONTACTO:", language);
+  const cvUrl = language?.startsWith("pt")
+    ? "/cv-Faro-pt.pdf"
+    : "/cv-Faro-es.pdf";
   return (
     <Box
       component="footer"

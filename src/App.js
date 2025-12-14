@@ -80,7 +80,7 @@ function App() {
           <About texts={t} />
           <Projects texts={t} />
 
-          <Footer texts={t} />
+          <Footer texts={t} language={language} />
         </Box>
       </Box>
     </>
