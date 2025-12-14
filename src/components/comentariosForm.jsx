@@ -7,30 +7,32 @@ export default function ComentariosForm({ texts }) {
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [enviado, setEnviado] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const tuNombre = texts.formulario.tu_nombre;
   const gmail = texts.formulario.email;
   const mensajetexto = texts.formulario.mensaje;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("https://mi-portfolio-be-2.onrender.com/api/comentarios/", {
-        autor,
-        email,
-        mensaje,
-      })
-      .then(() => {
-        setAutor("");
-        setEmail("");
-        setMensaje("");
-        setEnviado(true); // mensaje de confirmación
-        setTimeout(() => setEnviado(false), 4000); // oculta mensaje después de 4s
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("Hubo un error al enviar tu comentario.");
-      });
+    setLoading(true);
+
+    try {
+      await axios.post(
+        "https://mi-portfolio-be-2.onrender.com/api/comentarios/",
+        { autor, email, mensaje }
+      );
+
+      setAutor("");
+      setEmail("");
+      setMensaje("");
+      setEnviado(true);
+      setTimeout(() => setEnviado(false), 4000);
+    } catch (err) {
+      alert("Hubo un error al enviar tu comentario.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,8 +65,13 @@ export default function ComentariosForm({ texts }) {
         onChange={(e) => setMensaje(e.target.value)}
         required
       />
-      <Button type="submit" variant="contained" sx={{ mt: 1, mb: 1 }}>
-        Enviar
+      <Button
+        type="submit"
+        variant="contained"
+        disabled={loading}
+        sx={{ mt: 1, mb: 1 }}
+      >
+        {loading ? "Enviando..." : "Enviar"}
       </Button>
       <Typography
         variant="caption"
