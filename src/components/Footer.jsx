@@ -96,40 +96,22 @@ export default function Contacto({ texts, language }) {
         {/* CV */}
         <Box mt={3} display="flex" justifyContent="center">
           <Link
-            href={cvUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            download
+            href={`/cv?lang=${language}`}
             underline="none"
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-
               px: 3,
               py: 1.2,
-              minWidth: 180,
-
               borderRadius: "12px",
               border: "2px solid #66FCF1",
               color: "#66FCF1",
               fontWeight: "bold",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-
-              background: "rgba(10, 25, 41, 0.7)",
-              boxShadow: "0 0 12px rgba(102, 252, 241, 0.4)",
-              transition: "all 0.3s ease",
-
               "&:hover": {
                 background: "#66FCF1",
                 color: "#0A1929",
-                boxShadow: "0 0 20px rgba(102, 252, 241, 0.9)",
-                transform: "translateY(-2px)",
               },
             }}
           >
-            {texts.cv}
+            Ver CV
           </Link>
         </Box>
       </Box>
