@@ -26,9 +26,9 @@ const translations = {
             "Trabajé como desarrollador frontend en Axioma Soluções, una consultora enfocada en el desarrollo de sitios web para clientes de distintos rubros. Mi rol fue implementar interfaces modernas y responsivas utilizando React, JavaScript, HTML y CSS, agregando nuevas funcionalidades, ajustando componentes existentes y colaborando con el equipo para entregar soluciones personalizadas. Esta experiencia me permitió aplicar buenas prácticas en proyectos reales y mejorar mis habilidades trabajando bajo demanda y con enfoque en la experiencia del usuario.",
         },
         {
-          title: "La Bodega – E-commerce vino (2025, en desarrollo)",
+          title: "Sitio Web Barberia – Sistemas Reservas",
           description:
-            "Actualmente estoy desarrollando mi propio e-commerce llamado “La Bodega”, un proyecto personal orientado al rubro del vino. La aplicación está construida con React.js en el frontend y Python/Django en el backend. Implementé un sistema completo de autenticación y login, gestión de usuarios y base para un flujo de compra y venta de productos. El objetivo del proyecto es evolucionar gradualmente desde una vinoteca online hacia un club del vino, incorporando nuevas funcionalidades, membresías y experiencias personalizadas para los usuarios. Este desarrollo me permite aplicar y reforzar mis conocimientos en desarrollo full stack, arquitectura web y buenas prácticas de programación.",
+            "Sistema inteligente de gestión para barberías que automatiza reservas, turnos y la administración del negocio en una sola plataforma. Actualmente se encuentra en funcionamiento en barberías reales, validando su eficiencia en entornos productivos. Permite a los clientes agendar citas fácilmente, mientras el administrador gestiona barberos, disponibilidad y visualiza todos los detalles desde un panel centralizado. Incluye métricas en tiempo real con reportes diarios y mensuales para una mejor toma de decisiones. Además, fue desarrollado con una arquitectura multi-tenant, permitiendo escalar el sistema y ofrecerlo como servicio a múltiples barberías de forma independiente.",
         },
       ],
       practicos: [
@@ -82,9 +82,9 @@ const translations = {
             "Trabalhei como desenvolvedor frontend na Axioma Soluções, uma consultoria focada no desenvolvimento de sites para clientes de diversos setores. Meu papel foi implementar interfaces modernas e responsivas usando React, JavaScript, HTML e CSS, adicionando novas funcionalidades, ajustando componentes existentes e colaborando com a equipe para entregar soluções personalizadas. Esta experiência me permitiu aplicar boas práticas em projetos reais e melhorar minhas habilidades trabalhando sob demanda e com foco na experiência do usuário.",
         },
         {
-          title: "La Bodega – E-commerce vinho (2025, em processo)",
+          title: "Sitio Web Barbearia – Sistema pra Reservas",
           description:
-            "Atualmente estou desenvolvendo meu próprio e-commerce chamado “La Bodega”, um projeto pessoal voltado para o setor de vinhos. A aplicação está sendo construída com React.js no frontend e Python/Django no backend. Implementei um sistema completo de autenticação e login, gestão de usuários e a estrutura necessária para o fluxo de compra e venda de produtos. O objetivo do projeto é evoluir gradualmente de uma vinoteca online para um clube do vinho, incorporando novas funcionalidades, planos de assinatura e experiências personalizadas para os usuários. Este desenvolvimento me permite aplicar e aprimorar meus conhecimentos em desenvolvimento full stack, arquitetura web e boas práticas de programação.",
+            "Atualmente estou desenvolvendo meuSistema inteligente de gestão para barbearias que automatiza reservas, agendamentos e a administração do negócio em uma única plataforma. Atualmente está em funcionamento em barbearias reais, validando sua eficiência em ambientes produtivos. Permite que os clientes agendem horários facilmente, enquanto o administrador gerencia barbeiros, disponibilidade e visualiza todos os detalhes a partir de um painel centralizado. Inclui métricas em tempo real com relatórios diários e mensais para uma melhor tomada de decisão. Além disso, foi desenvolvido com uma arquitetura multi-tenant, permitindo escalar o sistema e oferecê-lo como serviço para múltiplas barbearias de forma independente.",
         },
       ],
       practicos: [
