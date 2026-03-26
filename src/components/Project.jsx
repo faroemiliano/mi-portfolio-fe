@@ -6,7 +6,6 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
   Grid,
   Paper,
   useMediaQuery,
