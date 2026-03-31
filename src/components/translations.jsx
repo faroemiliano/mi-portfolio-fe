@@ -29,6 +29,7 @@ const translations = {
           title: "Sitio Web Barberia – Sistemas Reservas",
           description:
             "Sistema inteligente de gestión para barberías que automatiza reservas, turnos y la administración del negocio en una sola plataforma. Actualmente se encuentra en funcionamiento en barberías reales, validando su eficiencia en entornos productivos. Permite a los clientes agendar citas fácilmente, mientras el administrador gestiona barberos, disponibilidad y visualiza todos los detalles desde un panel centralizado. Incluye métricas en tiempo real con reportes diarios y mensuales para una mejor toma de decisiones. Además, fue desarrollado con una arquitectura multi-tenant, permitiendo escalar el sistema y ofrecerlo como servicio a múltiples barberías de forma independiente.",
+          video: "https://www.youtube.com/embed/6BJmOuJmLeg",
         },
       ],
       practicos: [

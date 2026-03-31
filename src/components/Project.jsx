@@ -177,6 +177,20 @@ export default function Project({ texts }) {
                     {proyecto.title}
                   </Typography>
                   <Typography>{proyecto.description}</Typography>
+                  {proyecto.video && (
+                    <Box sx={{ mt: 2 }}>
+                      <iframe
+                        width="100%"
+                        height="200"
+                        src={proyecto.video}
+                        title={proyecto.title}
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                        style={{ borderRadius: "10px" }}
+                      />
+                    </Box>
+                  )}
                 </Paper>
               </Grid>
             ))}
