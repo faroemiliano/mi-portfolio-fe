@@ -86,6 +86,7 @@ const translations = {
           title: "Sitio Web Barbearia – Sistema pra Reservas",
           description:
             "Atualmente estou desenvolvendo meuSistema inteligente de gestão para barbearias que automatiza reservas, agendamentos e a administração do negócio em uma única plataforma. Atualmente está em funcionamento em barbearias reais, validando sua eficiência em ambientes produtivos. Permite que os clientes agendem horários facilmente, enquanto o administrador gerencia barbeiros, disponibilidade e visualiza todos os detalhes a partir de um painel centralizado. Inclui métricas em tempo real com relatórios diários e mensais para uma melhor tomada de decisão. Além disso, foi desenvolvido com uma arquitetura multi-tenant, permitindo escalar o sistema e oferecê-lo como serviço para múltiplas barbearias de forma independente.",
+          video: "https://www.youtube.com/embed/6BJmOuJmLeg",
         },
       ],
       practicos: [
