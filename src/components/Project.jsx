@@ -182,7 +182,7 @@ export default function Project({ texts }) {
                       <iframe
                         width="100%"
                         height="200"
-                        src={`${proyecto.video}?autoplay=1&mute=1`}
+                        src={`${proyecto.video}?autoplay=1`}
                         title={proyecto.title}
                         frameBorder="0"
                         allow="autoplay; encrypted-media"
